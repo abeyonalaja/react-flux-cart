@@ -1,0 +1,21 @@
+'use strict';
+
+var ActionTypes = require('../constants/ActionTypes');
+var AppDispatcher = require('../AppDispatcher');
+
+var AppActions = {
+
+  /**
+   * Set the current route.
+   * @param {string} route Supply a route value, such as `todos/completed`.
+   */
+  setRoute(route) {
+    AppDispatcher.handleViewAction({
+      actionType: ActionTypes.SET_CURRENT_ROUTE,
+      route
+    });
+  }
+
+};
+
+module.exports = AppActions;

@@ -1,0 +1,11 @@
+module.exports = {
+
+  // Route action types
+  SET_CURRENT_ROUTE: 'SET_CURRENT_ROUTE',
+
+  ADD_ITEM: "ADD_ITEM",
+  REMOVE_ITEM: "REMOVE_ITEM",
+  INCREASE_ITEM: "INCREASE_ITEM",
+  DECREASE_ITEM: "DECREASE_ITEM"
+
+};
