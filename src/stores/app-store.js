@@ -1,5 +1,6 @@
 var AppDispatcher = require('../AppDispatcher');
 var AppConstants = require('../constants/ActionTypes');
+var AppActions = require('../actions/app-actions')
 var merge = require('react/lib/merge');
 var EventEmitter = require('events').EventEmitter;
 

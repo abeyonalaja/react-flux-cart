@@ -7,12 +7,12 @@
 'use strict';
 
 var React = require('react');
-var AppActions = require('../../actions/app-actions')
+var AppActions = require('../../actions/app-actions.js')
 
 var Increase= React.createClass({
 
   handleClick(){
-    AppActions.increase({this.props.index});
+    AppActions.increaseItem(this.props.index);
   },
 
   render() {
