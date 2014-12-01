@@ -18,7 +18,7 @@ var Catalog =
   render: function() {
     var items = this.state.items.map(function(item){
       return <tr><td>{item.title}</td>
-      <td>{item.cost}</td>
+      <td>£{item.cost}</td>
       <td><AddToCart /></td></tr>
     });
     return (
