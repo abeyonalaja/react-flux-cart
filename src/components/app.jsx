@@ -5,9 +5,7 @@
 var React = require('react');
 var DefaultLayout = require('../layouts/DefaultLayout.jsx');
 var AppActions = require('../actions/app-actions');
-var Catalog = require('./Linky.jsx');
-var Catalog2 = require('./Link.jsx');
-// var AddToCart = require('./catalog/app-add-to-cart.js');
+var Catalog = require('./catalog/app-catalog.js');
 
 var AppPage= React.createClass({
   getDefaultProps() {

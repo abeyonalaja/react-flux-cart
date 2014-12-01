@@ -6,12 +6,12 @@
 'use strict';
 
 var React = require('react');
-var AppActions = require('../actions/app-actions')
+var AppActions = require('../../actions/app-actions.js')
 
 var AddToCart= React.createClass({
 
   handleClick(){
-    AppActions.addItem({this.props.item});
+    AppActions.addItem(this.props.item);
   },
 
   render() {
