@@ -11,7 +11,7 @@ var AppActions = require('../../actions/app-actions.js')
 var AddToCart= React.createClass({
 
   handleClick(){
-    console.log('Add items')
+    console.log('Add items', this.props.item)
     AppActions.addItem(this.props.item);
   },
 

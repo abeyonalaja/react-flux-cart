@@ -1,6 +1,5 @@
 var AppDispatcher = require('../AppDispatcher');
-var AppConstants = require('../constants/ActionTypes');
-var AppActions = require('../actions/app-actions')
+var AppActions = require('../constants/ActionTypes');
 var merge = require('react/lib/merge');
 var EventEmitter = require('events').EventEmitter;
 
@@ -29,11 +28,12 @@ function _decreaseItem(index) {
   if(_cartItems[index].qty > 1){
     _cartItems[index].qty -= 1;
   } else {
-    _removeitem(index);
+    console.log("decrease")
+    _removeItem(index);
   }
 }
 
-function addItem(item) {
+function _addItem(item) {
   if (!item.inCart) {
     item['qty'] = 1;
     item['inCart'] = true;
@@ -70,10 +70,10 @@ var AppStore = merge(EventEmitter.prototype, {
 
   dispatcherIndex:AppDispatcher.register(function(payload){
     var action = payload.action;
-
     switch(action.actionType) {
       case AppActions.ADD_ITEM:
         _addItem(payload.action.item);
+    console.log('Store dispatch')
         break;
 
       case AppActions.REMOVE_ITEM:

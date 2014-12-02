@@ -7,7 +7,6 @@ var Increase = require('./app-increase.js');
 var Decrease = require('./app-decrease.js');
 
 function cartItems() {
-  console.log('cartItems update', AppStore.getCart())
   return {items: AppStore.getCart()}
 }
 
@@ -23,15 +22,14 @@ var Cart =
   },
 
   _onChange:function() {
-    console.log('SomeChange')
     this.setState(cartItems());
   },
 
   render: function() {
     var total = 0;
-    var items = this.state.items.map(function(item){
+    var items = this.state.items.map(function(item, i){
       var subTotal = item.cost * item.qty;
-      total += subtotal;
+      total += subTotal;
       return (
         <tr key={i}>
           <td> <RemoveFromCart index={i} /></td>
@@ -41,7 +39,7 @@ var Cart =
             <Increase index={i} />
             <Decrease index={i} />
           </td>
-          <td>{subtotal}</td>
+          <td>{subTotal}</td>
         </tr>
       );
     });

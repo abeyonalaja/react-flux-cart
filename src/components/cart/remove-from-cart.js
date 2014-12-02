@@ -12,7 +12,7 @@ var AppActions = require('../../actions/app-actions.js')
 var RemoveFromCart= React.createClass({
 
   handleClick(){
-    // AppActions.removeItem({this.props.index});
+    AppActions.removeItem(this.props.index);
   },
 
   render() {
